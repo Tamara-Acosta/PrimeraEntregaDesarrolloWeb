@@ -1,0 +1,193 @@
+
+* {
+    box-sizing: border-box; /*calcula el ancho y total de un elemento*/
+    margin: 0; /*define el espacio o área vacía fuera del borde de un elemento, separándolo de otros elementos en la página web*/
+    padding: 0; /*espacio que se crea dentro de un elemento, entre su contenido y su borde*/
+}
+
+:root { /*pseudoclase definir y reutilizar valores. declara */
+    --color-principal-azul: #A6C4D1;
+    --color-secundario-verde: #8FB2A1;
+    --color-neutro-beige: #F5F5DC;
+    --color-texto-oscuro: #333333;
+    --color-texto-claro: #FFFFFF;
+    --fuente-titulos: 'Montserrat', sans-serif;
+    --fuente-cuerpo: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: var(--fuente-cuerpo); /*var-variable de CSS*/
+    background-color: var(--color-neutro-beige);
+    color: var(--color-texto-oscuro);
+    line-height: 1.6; /* controla la cantidad de espacio vertical entre lineas de texto en un bloque/parrafo*/
+}
+
+h1, h2 {
+    font-family: var(--fuente-titulos);
+    color: var(--color-principal-azul);
+}
+
+a {
+    text-decoration: none; /* elimina cualquier decoracion de texto existente, lineas, subrayado*/
+    color: var(--color-texto-oscuro);
+}
+
+ul {
+    list-style: none; /*eliminar las viñetas o números */
+}
+
+/* HEADER Y NAV*/
+header {
+    background-color: var(--color-principal-azul);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img.Img-logo {
+    width: 150px;
+    height: auto; /*alto*/
+}
+
+header nav ul {
+    display: flex;
+    gap: 1.5rem;  /*espacio entre elementos y contenedores*/
+}
+
+header nav a {
+    color: var(--color-texto-claro);
+    font-weight: 700;
+}
+
+header nav a:hover {
+    color: #f0f0f0;
+}
+
+/* SECCIÓN HERO*/
+.hero {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    color: var(--color-secundario-verde);
+    margin-bottom: 1.5rem;
+}
+
+.boton-contacto {
+    display: inline-block;
+    background-color: var(--color-secundario-verde);
+    color: var(--color-texto-claro);
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px; /* permite redondear las esquinas de un elemento*/
+    font-weight: bold;
+    border: none;
+}
+
+
+/* SECCIÓN DE GALERÍA */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* definir el numero y tamaño de las columnas del grid-cuadricula*/
+    gap: 1rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.imagen-container {
+    overflow: hidden; /*controla que ocurre cuando el contenido de un elemento excede los limites de su contenedor*/
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.imagen-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*hace que el contenido de un elemento escale y cubra todo su contenedor, para que no queden espacios vacios*/
+}
+
+/* SECCIÓN SLOGAN */
+.slogan-filosofia {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: var(--color-principal-azul);
+    color: var(--color-texto-claro);
+}
+
+.slogan-filosofia h2 {
+    color: var(--color-texto-claro);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.slogan-filosofia p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--color-secundario-verde);
+    color: var(--color-texto-claro);
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+footer h3 {
+    color: var(--color-texto-claro);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-redes {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.footer-redes a {
+    color: var(--color-texto-claro);
+    font-weight: 500;
+}
+
+/* FORMULARIO DE CONTACTO */
+.contenedor-formulario {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+form input, form textarea, form select {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    font-family: var(--fuente-cuerpo);
+    font-size: 1rem;
+}
+
+
+
