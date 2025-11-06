@@ -1,29 +1,25 @@
 <!DOCTYPE html>
 <html lang="es"> <!-- es / español-->
-<head> <!-- sección que contiene metadatos, es decir, información sobre el documento web, 
-    como el título, la descripción y los enlaces a archivos CSS y JavaScript, 
-    que no son visibles directamente en la página del usuario-->
-    <meta charset="UTF-8"> <!-- estándar universal que asegura que los caracteres de cualquier idioma-->
+<head> <!--info sobre el documento web, no son visibles directamente en la página del usuario-->
+    <meta charset="UTF-8"> <!--asegura los caracteres de cualquier idioma-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- le indica al navegador cómo controlar 
     las dimensiones y el zoom de una página web en diferentes dispositivos-->
     <title>Meraki Consultorios Interdisciplinarios</title>
     
-    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Le dice al navegador que se prepare para conectarse al servidor de Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- servidor de Google Fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- aloja los archivos de las fuentes,para ejecutar mas rapido-->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- El navegador descarga una hoja de 
-    estilos de Google que contiene las reglas que necesito-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!--estilos de Google-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    
     
     <link rel="stylesheet" href="style.css"> <!-- link de CSS-->
 </head>
 <body>
-    <header> <!-- define el contenido introductorio o de navegación de una página o sección-->
+    <header> <!--contenido introductorio o de navegación de una pág o seccion-->
         <a href="./index.html">
             <img src="./recursos/logo.jpg" alt="Logo Meraki Consultorios Interdisciplinarios" class="Img-logo">
         </a>
         
-        <nav > <!-- define una sección de enlaces de navegación principal, menú-->
+        <nav > <!-- navegación principal, menú-->
             <ul>
                 <li><a href="./index.html">INICIO</a></li>
                 <li><a href="./secciones/nosotros.html">NOSOTROS</a></li>
@@ -37,7 +33,7 @@
         </nav>
     </header>
 
-    <main> <!-- etiqueta semántica que se utiliza para definir el contenido principal y único de un documento-->
+    <main> <!-- etiqueta semántica / contenido principal-->
         <section class="hero">
             <h1>Acompañamiento Interdisciplinario</h1>
             <p>Un espacio de encuentro y crecimiento para toda la familia.</p>
@@ -61,15 +57,41 @@
         </section>
     </main>
 
-    <footer> <!-- define el pie de página-->
-        <div class="footer-info">
-            <h3>NUESTRAS REDES Y CONTACTO</h3>
-            <ul class="footer-redes">
-                <li> <img src="./recursos/instagram.png" alt=""> <a href="https://www.instagram.com/meraki.citybell/" target="_blank">Instagram</a></li>
-                <li> <img src="./recursos/phone.png" alt=""><a href="tel:+5491161267680">Teléfono</a></li>
-                <li> <img src="./recursos/at.png" alt=""><a href="mailto:merakiconsultorio@gmail.com">Mail</a></li>
+ <footer>
+    <div class="contenedor-principal-footer">
+        
+        <div class="footer-columna footer-identidad">
+            <h3>MERAKI</h3>
+            <p>Abordaje interdisciplinario para el desarrollo y bienestar integral de toda la familia.</p>
+        </div>
+        
+        <div class="footer-columna footer-enlaces">
+            <h3>Enlaces Rápidos</h3>
+            <ul>
+                <li><a href="/index.html">Inicio</a></li> 
+                <li><a href="./secciones/servicios.html">Servicios</a></li>
+                <li><a href="./secciones/nosotros.html">Nosotros</a></li>
+                <li><a href="./secciones/contacto.html">Contacto y Turnos</a></li>
             </ul>
         </div>
-    </footer>
+        
+        <div class="footer-columna footer-contacto">
+            <h3>Contáctanos</h3>
+            <p>📍 Calle 123 N° 456, City Bell</p>
+            <p>📞 <a href="tel:+5491161267680">(+54 9 11) 6126-7680</a></p>
+            <p>📧 <a href="mailto:merakiconsultorio@gmail.com">mail@meraki.com</a></p>
+            
+            <div class="footer-redes">
+                <a href="https://www.instagram.com/meraki.citybell/" target="_blank">Instagram</a> | 
+                <a href="#">Facebook</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-copyright">
+        <p>&copy; 2025 Meraki Consultorios Interdisciplinarios. Todos los derechos reservados.</p>
+    </div>
+</footer>
+    <script src="./contacto.js"></script>
 </body>
 </html>
